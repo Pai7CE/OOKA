@@ -22,7 +22,7 @@ public class DBAccess {
 	
 
 	public static void main(String[] args) {
-		DBAccess acc = new DBAccess();
+		/*DBAccess acc = new DBAccess();
 		System.out.println("Mini-Tutorial der Klasse DBAccess" );
 		System.out.println("c/o Sascha Alda, 2015-2020" );
 		System.out.println("---------------------------------" );
@@ -45,7 +45,7 @@ public class DBAccess {
 		
 		System.out.println("\nDann MUSS ein externer Client mit der Methode closeConnection() die Session explizit schließen!" );
 		acc.closeConnection();
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub */
 
 	}
 	
