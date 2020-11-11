@@ -1,32 +1,33 @@
 package org.hbrs.ooka.ws2020.uebung1.buchungssystem;
 
 import org.hbrs.ooka.ws2020.uebung1.Hotel;
+import org.hbrs.ooka.ws2020.uebung1.ext.Cache;
 import org.hbrs.ooka.ws2020.uebung1.ext.Hotelsuche;
+import org.hbrs.ooka.ws2020.uebung1.ext.Logging;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class HotelRetrieval implements Hotelsuche {
+public class HotelRetrieval implements Hotelsuche, Cache {
 
     DBAccess acc;
 
-//    public static void main(String[] args) {
-//        HotelRetrieval hr = new HotelRetrieval();
-//        hr.openSession();
-//        System.out.println(hr.getHotelByName("Berg Hotel")[0].getName());
-//        System.out.println(hr.getHotelByName("Berg Hotel")[0].getLocation());
-//    }
 
     @Override // TODO generisch programmieren
     public Hotel[] getHotelByName(String name) {
 
+        Logging.logAction(name);
+
         acc.getObjects(DBAccess.HOTEL, name);
         List<String> search = acc.getObjects(DBAccess.HOTEL, name);
 
-        // Add to array
-        Hotel[] results = new Hotel[1];
-        results[0] = new Hotel(search.get(1), search.get(2));
+        ArrayList<Hotel> results = new ArrayList<>();
 
-        return results;
+        for (int i = 0; i < search.size(); i = i + 3) {
+            results.add(new Hotel(search.get(i+1), search.get(i+2)));
+        }
+
+        return results.toArray(Hotel[]::new);
     }
 
     @Override
@@ -39,4 +40,8 @@ public class HotelRetrieval implements Hotelsuche {
         acc.closeConnection();
     }
 
+    @Override
+    public void cacheResult(String key, List<Object> value) {
+
+    }
 }
