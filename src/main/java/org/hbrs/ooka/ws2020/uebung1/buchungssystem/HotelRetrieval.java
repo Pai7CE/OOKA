@@ -1,22 +1,19 @@
 package org.hbrs.ooka.ws2020.uebung1.buchungssystem;
 
 import org.hbrs.ooka.ws2020.uebung1.Hotel;
-import org.hbrs.ooka.ws2020.uebung1.ext.Cache;
-import org.hbrs.ooka.ws2020.uebung1.ext.Hotelsuche;
-import org.hbrs.ooka.ws2020.uebung1.ext.Logging;
+import org.hbrs.ooka.ws2020.uebung1.ext.cache.CachePort;
+import org.hbrs.ooka.ws2020.uebung1.ext.hotelsuche.HotelSuche;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class HotelRetrieval implements Hotelsuche, Cache {
+public class HotelRetrieval implements HotelSuche {
 
-    DBAccess acc;
+    DBAccess acc = new DBAccess();
 
 
     @Override // TODO generisch programmieren
     public Hotel[] getHotelByName(String name) {
-
-        Logging.logAction(name);
 
         acc.getObjects(DBAccess.HOTEL, name);
         List<String> search = acc.getObjects(DBAccess.HOTEL, name);
@@ -32,7 +29,6 @@ public class HotelRetrieval implements Hotelsuche, Cache {
 
     @Override
     public void openSession() {
-        acc = new DBAccess();
         acc.openConnection();
     }
     // TODO close connection at some point
@@ -40,8 +36,4 @@ public class HotelRetrieval implements Hotelsuche, Cache {
         acc.closeConnection();
     }
 
-    @Override
-    public void cacheResult(String key, List<Object> value) {
-
-    }
 }

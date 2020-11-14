@@ -1,18 +1,17 @@
-package org.hbrs.ooka.ws2020.uebung1.ext;
+package org.hbrs.ooka.ws2020.uebung1.ext.log;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Logging {
+public class Logger implements Logging {
 
-    public static void logAction(String query){
+    @Override
+    public void logAction(String query) {
         SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yy HH:mm");
 
         String output = "Zugriff auf Buchungssystem über Methode getHotelByName. Suchwort: " + query;
         String timestamp = sdf.format(new Date());
 
-
         System.out.println(timestamp + " " + output);
     }
-
 }
