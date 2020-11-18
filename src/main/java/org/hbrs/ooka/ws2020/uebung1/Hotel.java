@@ -3,7 +3,6 @@ package org.hbrs.ooka.ws2020.uebung1;
 public class Hotel {
     private String name;
     private String location;
-    private boolean f = true;
 
     public Hotel(String name, String location) {
         this.name = name;
