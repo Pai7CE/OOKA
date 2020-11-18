@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="OOKA:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/OOKA_jar</output-path>
+    <root id="archive" name="OOKA.jar">
+      <element id="module-output" name="OOKA" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/javassist/javassist/3.26.0-GA/javassist-3.26.0-GA.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/reflections/reflections/0.9.12/reflections-0.9.12.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/postgresql/postgresql/9.2-1004-jdbc4/postgresql-9.2-1004-jdbc4.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
