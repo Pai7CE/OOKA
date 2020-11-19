@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <help_text>
+</help_text>
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>385</x>
+      <y>308</y>
+      <w>264</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;class&gt;&gt; 
+DBAccess
+--
++ getObjects(int, String): List&lt;String&gt;
++ openSession(): void
++ closeSession(): void
++ getObjects(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>781</x>
+      <y>341</y>
+      <w>264</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;class&gt;&gt; 
+HotelRetrieval
+--
++ getObjects(int, String): List&lt;String&gt;
++ openSession(): void
++ closeSession(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1045</x>
+      <y>121</y>
+      <w>264</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt; 
+HotelSuche
+--
++ getObjects(int, String): List&lt;String&gt;
++ openSession(): void
++ closeSession(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1155</x>
+      <y>341</y>
+      <w>264</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;class&gt;&gt; 
+HotelSuchePort
+--
++ HotelSuchePort()
++ getObjects(int, String): List&lt;String&gt;
++ openSession(): void
++ closeSession(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>638</x>
+      <y>385</y>
+      <w>165</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>902</x>
+      <y>220</y>
+      <w>242</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>200.0;10.0;200.0;60.0;10.0;60.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1166</x>
+      <y>220</y>
+      <w>143</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;110.0;70.0;110.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1672</x>
+      <y>308</y>
+      <w>242</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;class&gt;&gt; 
+Clienttest
+--
++ main(String[]): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>869</x>
+      <y>814</y>
+      <w>286</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt; 
+Caching
+--
++ cacheResult(String, List&lt;Hotel&gt;): void
++ getEntry(String): List&lt;Hotel&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>638</x>
+      <y>946</y>
+      <w>286</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;class&gt;&gt; 
+Cache
+--
+- cache: HashMap&lt;String, List&lt;Hotel&gt;
+--
++ cacheResult(String, List&lt;Hotel&gt;): void
++ getEntry(String): List&lt;Hotel&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>858</x>
+      <y>891</y>
+      <w>176</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>140.0;10.0;140.0;30.0;10.0;30.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>638</y>
+      <w>286</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;class&gt;&gt; 
+CachePort
+--
++ cacheResult(String, List&lt;Hotel&gt;): void
++ getEntry(String): List&lt;Hotel&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>803</x>
+      <y>737</y>
+      <w>231</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>190.0;70.0;190.0;50.0;10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1188</x>
+      <y>858</y>
+      <w>286</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt; 
+Logging
+--
++ logAction(String): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1287</x>
+      <y>990</y>
+      <w>286</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;class&gt;&gt; 
+Logger
+--
++ logAction(String): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1320</x>
+      <y>935</y>
+      <w>132</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0;100.0;30.0;100.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>726</x>
+      <y>737</y>
+      <w>33</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;190.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1122</x>
+      <y>451</y>
+      <w>154</w>
+      <h>385</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;330.0;10.0;80.0;120.0;80.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1276</x>
+      <y>451</y>
+      <w>187</w>
+      <h>429</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>150.0;370.0;150.0;80.0;10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1034</x>
+      <y>385</y>
+      <w>143</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1298</x>
+      <y>154</y>
+      <w>396</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;300.0;10.0;300.0;160.0;340.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>110</y>
+      <w>1287</w>
+      <h>495</h>
+    </coordinates>
+    <panel_attributes>Buchungssystem</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>781</x>
+      <y>473</y>
+      <w>264</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;class&gt;&gt; 
+HotelRetrievalExtended
+--
++ getObjects(int, String): List&lt;String&gt;
++ openSession(): void
++ closeSession(): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1034</x>
+      <y>396</y>
+      <w>143</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;120.0;60.0;120.0;60.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>638</x>
+      <y>407</y>
+      <w>165</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0;50.0;110.0;130.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>209</x>
+      <y>671</y>
+      <w>286</w>
+      <h>187</h>
+    </coordinates>
+    <panel_attributes>Objects</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>286</x>
+      <y>726</y>
+      <w>132</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Hotel
+--
+- name: String
+- location: String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>176</x>
+      <y>363</y>
+      <w>231</w>
+      <h>418</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+</panel_attributes>
+    <additional_attributes>100.0;360.0;10.0;360.0;10.0;10.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>715</x>
+      <y>187</y>
+      <w>352</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>300.0;10.0;10.0;10.0;10.0;280.0;60.0;280.0</additional_attributes>
+  </element>
+</diagram>
